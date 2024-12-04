@@ -292,23 +292,6 @@ n
   document.addEventListener("keydown", function (evt) {
     // Avoid keydown event repetition due to holding key
     if (evt.repeat) return;
-
-
-     /*
-      Handle Control + Up (equivalent to Control + Page Up)
-    */
-    if (evt.altKey && !evt.ctrlKey && !evt.shiftKey && evt.key.toLowerCase() === "arrowup") {
-        const prevCell = getPlutoCell(getSelection().anchorNode).previousElementSibling;
-        if (prevCell) prevCell.scrollIntoView({ behavior: "smooth" });
-    }
-
-    /*
-      Handle Control + Down (equivalent to Control + Page Down)
-    */
-    if (evt.altKey && evt.ctrlKey && !evt.shiftKey && evt.key.toLowerCase() === "arrowdown") {
-        const nextCell = getPlutoCell(getSelection().anchorNode).nextElementSibling;
-        if (nextCell) nextCell.scrollIntoView({ behavior: "smooth" });
-    }
     
     /*
       Insert "begin ... end" code in Pluto cell
