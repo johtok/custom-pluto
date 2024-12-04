@@ -343,10 +343,10 @@ n
       Toggle code cell visibility: Alt+v
     */
     if (
-      !evt.altKey &&
-      evt.ctrlKey &&
-      evt.shiftKey &&
-      evt.key.toLowerCase() === "v"
+      evt.altKey &&
+      !evt.ctrlKey &&
+      !evt.shiftKey &&
+      evt.key.toLowerCase() === "<"
     ) {
       getPlutoCell(getSelection().anchorNode)
         .querySelector("button.foldcode").click();
