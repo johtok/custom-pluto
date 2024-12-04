@@ -346,7 +346,7 @@ n
       evt.altKey &&
       !evt.ctrlKey &&
       !evt.shiftKey &&
-      evt.key.toLowerCase() === "<"
+      evt.key.toLowerCase() === "n"
     ) {
       getPlutoCell(getSelection().anchorNode)
         .querySelector("button.foldcode").click();
