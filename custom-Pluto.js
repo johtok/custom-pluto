@@ -297,7 +297,7 @@ n
      /*
       Handle Control + Up (equivalent to Control + Page Up)
     */
-    if (evt.ctrlKey && !evt.shiftKey && evt.key.toLowerCase() === "arrowup") {
+    if (!evt.ctrlKey && !evt.shiftKey && evt.key.toLowerCase() === "arrowup") {
         const prevCell = getPlutoCell(getSelection().anchorNode).previousElementSibling;
         if (prevCell) prevCell.scrollIntoView({ behavior: "smooth" });
     }
@@ -305,7 +305,7 @@ n
     /*
       Handle Control + Down (equivalent to Control + Page Down)
     */
-    if (evt.ctrlKey && !evt.shiftKey && evt.key.toLowerCase() === "arrowdown") {
+    if (!evt.ctrlKey && !evt.shiftKey && evt.key.toLowerCase() === "arrowdown") {
         const nextCell = getPlutoCell(getSelection().anchorNode).nextElementSibling;
         if (nextCell) nextCell.scrollIntoView({ behavior: "smooth" });
     }
